@@ -122,6 +122,9 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+/*
+This was the function I originally coded to solve this problem.
+
 function uniq(arr, func) {
   var newArr = [arr[0]]
   var unique = true
@@ -139,6 +142,19 @@ function uniq(arr, func) {
   }
   func(newArr)
 }
+*/
+
+//I like this one better
+function uniq(arr, cb) {
+  let uniqArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if(!uniqArray.includes(arr[i])) {
+      uniqArr.push(arr[i])
+    }
+  }
+  cb(uniqArr)
+}
+
 // Do not edit the code below.
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
